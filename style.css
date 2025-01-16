@@ -1,0 +1,172 @@
+:root {
+  /* font */
+  --font-serif: "Roboto", serif;
+  --font-weight-md: 500;
+
+  /* color */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-blue: #34547a;
+  --color-gray: #eeeff1;
+  --color-gray-dark: #727272;
+  --color-gray-light: #f9f9f9;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none;
+}
+
+html {
+  line-height: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--font-serif);
+}
+
+button {
+  border: none;
+  padding: 20px 56px;
+  letter-spacing: 1px;
+  max-width: max-content;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: var(--color-blue);
+}
+
+iframe {
+  width: 100%;
+  height: 640px;
+}
+
+/* site header */
+.site-header {
+  padding: 80px 0;
+  background: var(--color-gray);
+}
+
+/* section */
+section {
+  padding: 96px 0;
+}
+
+section.bg-gray {
+  background: var(--color-gray);
+}
+
+section.bg-blue {
+  color: var(--color-white);
+  background: var(--color-blue);
+}
+
+/* container */
+.container {
+  gap: 64px 0;
+  display: flex;
+  flex-direction: column;
+  width: min(100% - 32px, 1100px);
+  margin-inline: auto;
+}
+
+/* site navigation */
+.site-nav__menu {
+  gap: 0 40px;
+  display: flex;
+}
+
+.site-nav__menu-item > a {
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.site-nav__menu-item--active > a {
+  color: var(--color-blue);
+  font-weight: var(--font-weight-md);
+}
+
+/* headline */
+.headline {
+  gap: 48px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.headline--center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.headline__title {
+  font-weight: var(--font-weight-md);
+}
+
+h1.headline__title {
+  font-size: 48px;
+}
+
+h2.headline__title {
+  font-size: 32px;
+}
+
+.headline__textarea {
+  max-width: 540px;
+  line-height: 1.64;
+  color: var(--color-gray-dark);
+}
+
+/* card */
+.card-group {
+  gap: 0 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  gap: 0 24px;
+  display: flex;
+  align-items: center;
+}
+
+.card__panel {
+  gap: 8px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__panel-title {
+  font-size: 24px;
+  font-weight: var(--font-weight-md);
+}
+
+/* site footer */
+.site-footer {
+  padding: 48px 0;
+  color: var(--color-white);
+  background: var(--color-blue);
+}
+
+.copyright {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.copyright__title {
+  font-size: 24px;
+  font-weight: var(--font-weight-md);
+}
+
+.copyright__textarea {
+  font-size: 14px;
+}
