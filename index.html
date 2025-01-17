@@ -28,7 +28,10 @@
           <li class="site-nav__menu-item"><a href="#section-workflow">Процесс</a></li>
           <li class="site-nav__menu-item"><a href="#section-contact">Контакты</a></li>
         </ul>
+
+        <button class="site-nav__button">Меню</button>
       </nav>
+
 
     </div>
   </header>
@@ -155,6 +158,29 @@
 
     </div>
   </footer>
+
+  <script>
+    const button = document.querySelector('.site-nav__button');
+    const menu = document.querySelector('.site-nav__menu');
+    const menuItems = document.querySelectorAll('.site-nav__menu-item');
+
+    button.addEventListener('click', () => {
+      menu.classList.toggle('site-nav__menu--active');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!menu.contains(event.target) && event.target !== button) {
+        menu.classList.remove('site-nav__menu--active');
+      }
+    });
+
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        menu.classList.remove('site-nav__menu--active');
+      });
+    });
+
+  </script>
 
 </body>
 
